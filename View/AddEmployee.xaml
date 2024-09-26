@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Module02Exercise01.View.AddEmployee"
+             Title="Add Employee">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <Frame CornerRadius="10" Padding="15" BackgroundColor="#f0f0f0">
+                <VerticalStackLayout Spacing="10">
+                    <Entry x:Name="FirstNameEntry" Placeholder="Firstname" />
+                    <Entry x:Name="LastNameEntry" Placeholder="Lastname" />
+                    <Entry x:Name="FullNameEntry" Placeholder="Fullname" IsEnabled="False" />
+                    <Entry x:Name="PositionEntry" Placeholder="Position" />
+                    <Entry x:Name="DepartmentEntry" Placeholder="Department" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame CornerRadius="10" Padding="15" BackgroundColor="#f0f0f0">
+                <VerticalStackLayout Spacing="10">
+                    <Button Text="Take Employee Photo" Clicked="OnTakePhotoClicked" 
+                            BackgroundColor="#007AFF" TextColor="White" />
+                    <Image x:Name="EmployeeImage" WidthRequest="200" HeightRequest="200" 
+                           Aspect="AspectFill" HorizontalOptions="Center" />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Frame CornerRadius="10" Padding="15" BackgroundColor="#f0f0f0">
+                <VerticalStackLayout Spacing="10">
+                    <Button Text="Get Location" Clicked="OnGetLocationClicked" 
+                            BackgroundColor="#34C759" TextColor="White" />
+                    <Entry x:Name="MunicipalityEntry" Placeholder="Municipality" IsEnabled="False" />
+                    <Entry x:Name="ProvinceEntry" Placeholder="Province" IsEnabled="False" />
+                    <Label x:Name="CoordinatesLabel" Text="Coordinates: " />
+                </VerticalStackLayout>
+            </Frame>
+
+            <Button Text="Add Employee" Clicked="OnAddEmployeeClicked" 
+                    BackgroundColor="#FF3B30" TextColor="White" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
